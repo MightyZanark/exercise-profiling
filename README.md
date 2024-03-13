@@ -1,24 +1,24 @@
 ## Modul 5
 
 Screenshot sebelum profiling dengan JMeter GUI
-![Screenshot hasil test all-student-request](./all-student-request-JMeter-gui.png)
-![Screenshot hasil test all-student-name-request](./all-student-name-request-JMeter-gui.png)
-![Screenshot hasil test highest-gpa-request](./highest-gpa-request-JMeter-gui.png)
+![Screenshot hasil test all-student-request](./all-student-request-jmeter-gui.png)
+![Screenshot hasil test all-student-name-request](./all-student-name-request-jmeter-gui.png)
+![Screenshot hasil test highest-gpa-request](./highest-gpa-request-jmeter-gui.png)
 
 Screenshot sebelum profiling log hasil JMeter CLI
-![Screenshot log hasil test all-student-request JMeter CLI](./all-student-request-JMeter-cli.png)
-![Screenshot log hasil test all-student-name-request JMeter CLI](./all-student-name-request-JMeter-cli.png)
-![Screenshot log hasil test highest-gpa-request JMeter CLI](./highest-gpa-request-JMeter-cli.png)
+![Screenshot log hasil test all-student-request JMeter CLI](./all-student-request-jmeter-cli.png)
+![Screenshot log hasil test all-student-name-request JMeter CLI](./all-student-name-request-jmeter-cli.png)
+![Screenshot log hasil test highest-gpa-request JMeter CLI](./highest-gpa-request-jmeter-cli.png)
 
 Screenshot sesudah profiling dengan JMeter GUI
-![Screenshot hasil test all-student-request setelah optimize](./all-student-request-after-optimize-JMeter-gui.png)
-![Screenshot hasil test all-student-name-request setelah optimize](./all-student-name-request-after-optimize-JMeter-gui.png)
-![Screenshot hasil test highest-gpa-request setelah optimize](./highest-gpa-request-after-optimize-JMeter-gui.png)
+![Screenshot hasil test all-student-request setelah optimize](./all-student-request-after-optimize-jmeter-gui.png)
+![Screenshot hasil test all-student-name-request setelah optimize](./all-student-name-request-after-optimize-jmeter-gui.png)
+![Screenshot hasil test highest-gpa-request setelah optimize](./highest-gpa-request-after-optimize-jmeter-gui.png)
 
 Screenshot sesudah profiling log hasil JMeter CLI
-![Screenshot log hasil test all-student-request JMeter CLI setelah optimize](./all-student-request-after-optimize-JMeter-cli.png)
-![Screenshot log hasil test all-student-name-request JMeter CLI setelah optimize](./all-student-name-request-after-optimize-JMeter-cli.png)
-![Screenshot log hasil test highest-gpa-request JMeter CLI setelah optimize](./highest-gpa-request-after-optimize-JMeter-cli.png)
+![Screenshot log hasil test all-student-request JMeter CLI setelah optimize](./all-student-request-after-optimize-jmeter-cli.png)
+![Screenshot log hasil test all-student-name-request JMeter CLI setelah optimize](./all-student-name-request-after-optimize-jmeter-cli.png)
+![Screenshot log hasil test highest-gpa-request JMeter CLI setelah optimize](./highest-gpa-request-after-optimize-jmeter-cli.png)
 
 ### Konklusi
 Dari hasil JMeter sebelum melakukan profiling dan optimisasi, dapat dilihat bahwa waktu yang dibutuhkan untuk melakukan request ke endpoint `all-student` membutuhkan waktu yang sangat lama, sekitar 90k - 110k ms. Waktu yang cukup lama juga dapat dilihat untuk request ke endpoint `all-student-name`, yang berada di kisaran 1700 - 2600ms. Untuk request ke endpoint `highest-gpa` masih cukup wajar, sekitar 90 - 100ms. Namun, setelah melakukan profiling dan optimisasi, waktu yang dibutuhkan untuk melakukan request ke ketiga endpoint di atas menurun dengan cukup banyak, terutama endpoint `all-student` dan `all-student-name`. Waktu yang dibutuhkan untuk melakukan request ke `all-student` turun hingga 4400 - 6700ms dengan salah satu request dari 10 mencapai 8800ms, mendekati hasil awal sebelum profiling dan optimisasi. Untuk request ke endpoint `all-student-name`, waktu yang dibutuhkan turun menjadi sekitar 90 - 100ms, dengan ada 2 request yang mencapai 200 dan 300ms, namun waktu tersebut masih jauh lebih cepat dibanding waktu awal. Untuk request ke endpoint `highest-gpa`, waktu turun menjadi sekitar 6 - 20ms, peningkatan yang bagus juga jika dibandingkan dengan performa awal. Dapat dilihat bahwa dengan melakukan profiling dan meningkatkan performa code dengan optimisasi, waktu yang dibutuhkan untuk menjalankan code tersebut juga dapat mengalami penurunan yang drastis, yang mengakibatkan code kita berjalan dengan lebih cepat.
